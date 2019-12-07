@@ -26,7 +26,7 @@ class LabelFetcher {
     static List paginate(String url) {
         Client client = ClientBuilder.newClient();
         //client.register(EntityLoggingFilter.class);
-        //client.register(HTTPLoggingFilter.class);
+        client.register(HTTPLoggingFilter.class);
 
         WebTarget target = client.target(url);
 
